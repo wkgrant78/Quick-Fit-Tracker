@@ -1,9 +1,9 @@
-//install packages / setup dependencies
+//install packages and setup dependencies
 const express = require('express');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 
-//setup port
+//setup environmental variable
 const PORT = process.env.PORT || 3000;
 
 const app = express();
@@ -18,7 +18,7 @@ app.use(express.static("public"));
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {useNewUrlParser: true});
 
 
-//use routes
+//routes used for CRUD execution
 require('./routes/api-routes')(app)
 require('./routes/html-routes')(app)
 

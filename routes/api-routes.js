@@ -15,7 +15,7 @@ module.exports = (app) => {
         });
     });
 
-    //PUT - used to update workout
+    //PUT - used to update workout with new exercises
     app.put("/api/workouts/:workout", ({ params, body }, res) => {
         db.Workout.findOneAndUpdate({ _id: params.id},
                                     {$push: {exercise:body }},
@@ -25,7 +25,7 @@ module.exports = (app) => {
                                     })
     });
 
-    //POST - create new workout
+    //POST - create a new workout
     app.post('/api/workouts', (req,res) => {
         db.Workout.create({}).then(newWorkout => {
             res.json(newWorkout);

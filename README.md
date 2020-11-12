@@ -25,6 +25,7 @@ The purpose of this app is to allow the user to view, create, and track daily wo
 * Create a MongoDB Atlas account and connect to database
 * Write the server.js, create workout/exercise models, api/html routes
 * Check functionality
+* Deploy onHeroku
 * Edit UI - if time permits
 
 
@@ -36,7 +37,8 @@ The purpose of this app is to allow the user to view, create, and track daily wo
 * Completed models/workout.js, updated README
 * Completed models/index.js, updated README
 * Completed html-routes.js, updated README
-*
+* Reverted to original folder/file structure - could not get paths to function
+* 
 
 
 
