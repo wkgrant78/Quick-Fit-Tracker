@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 
+// Schema constructor to create a new schema instance
 const schema = mongoose.schema;
 
-const workoutschema = new Schema( 
+const workoutSchema = new Schema( 
     {
             day: {
                 type: Date,
@@ -39,6 +40,7 @@ const workoutschema = new Schema(
             }
         ]
     },
+    
     {
         // sets the virtual field to be displayed on client side via mongoose
         // https://mongoosejs.com/docs/guide.html#toJSON
@@ -48,6 +50,7 @@ const workoutschema = new Schema(
     }
 );
 
+// virtual properties are document properties that you can get and set but that do not get persisted to MongoDB
 // https://mongoosejs.com/docs/tutorials/virtuals.html
 workoutSchema.virtual("totalDuration").get(function() {
     return this.exercises.reduce((total, exercise) => 

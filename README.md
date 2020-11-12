@@ -1,7 +1,8 @@
 # Quick Fit Tracker
 
 ### PROJECT DESCRIPTION:
-Create a workout tracker with the provided fron-end code. This application will require a Mongo database with a Mongogoose schema and handle routes using Express.
+Create a workout tracker with the provided front-end code. This application will require a Mongo database with a Mongoose schema and handle routes using Express. The API developed will be based on the CRUD model (create, retrieve, update, and delete).
+
 
 The purpose of this app is to allow the user to view, create, and track daily workouts. They will have the option to log multiple exercises in any given day, view exercise details, and assign which type of exercise they completed.
 
@@ -16,7 +17,7 @@ The purpose of this app is to allow the user to view, create, and track daily wo
         - weight
         - sets/reps
         - duration/distance
-* Deploy app with a MongoDB database to Heroki
+* Deploy app with a MongoDB database to Heroku
 
 
 ### DEVELOPMENT PLAN:
@@ -32,8 +33,8 @@ The purpose of this app is to allow the user to view, create, and track daily wo
 * Installed npm packages, created new folders and reorganized file structure
 * Started server.js
 * Started api-routes.js
-* Completed models\workout.js, updated README
-* 
+* Completed models/workout.js, updated README
+* Completed models/index.js, updated README
 
 
 
