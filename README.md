@@ -35,6 +35,8 @@ The purpose of this app is to allow the user to view, create, and track daily wo
 * Started api-routes.js
 * Completed models/workout.js, updated README
 * Completed models/index.js, updated README
+* Completed html-routes.js, updated README
+*
 
 
 

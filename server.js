@@ -6,11 +6,24 @@ const mongoose = require('mongoose');
 // setup port
 const PORT = process.env.PORT || 3000;
 
-// setup logging of incoming information
-app.use(logger("dev"));
+const app = express();
 
-// parse incoming requests
+app.use(logger('dev'));
 app.use(express.urlencoded ({ extended:true }));
 app.use(express.json());
+// app.use(express.json());
+app.use(express.static("public"));
 
-// 
+// connect to MongoDB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true, useUnifiedTopology: true });
+
+const db = require("./models");
+
+require("./routes/api-routes")(app);
+require("./routes/html-routes")(app);
+
+app.listen(PORT, function() {
+    console.log(`Now listening on port: ${PORT}`);
+});
+
+

@@ -1,7 +1,8 @@
 // define db
-const db = require('.../models')
+const db = require('../models')
 
 module.exports = (app) => {
+
     // read last workout
         app.get("/api/workouts", (req, res) => {
             db.Workout.find({})
