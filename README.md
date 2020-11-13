@@ -38,13 +38,16 @@ The purpose of this app is to allow the user to view, create, and track daily wo
 * Completed models/index.js, updated README
 * Completed html-routes.js, updated README
 * Reverted to original folder/file structure - could not get paths to function
-* 
+* Fixed api-routes - functioning on local host... redeployed, 'bench press' only exercise being stored
+* Updated README and added screenshots
 
 
 
 ### SCREENSHOTS:
 
-<img src="" alt="">
+<img src="/images/quickFitTracker.PNG" alt="quick fitness tracker">
+
+<img src="/images/progressReport.PNG" alt="fitness progress report">
 
 
 ### HEROKU URL:
