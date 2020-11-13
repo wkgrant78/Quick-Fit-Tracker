@@ -45,9 +45,9 @@ The purpose of this app is to allow the user to view, create, and track daily wo
 
 ### SCREENSHOTS:
 
-<img src="/images/quickFitTracker.PNG" alt="quick fitness tracker">
+<img src="./images/quickFitTracker.PNG" alt="quick fitness tracker">
 
-<img src="/images/progressReport.PNG" alt="fitness progress report">
+<img src="./images/progressReport.PNG" alt="fitness progress report">
 
 
 ### HEROKU URL:
