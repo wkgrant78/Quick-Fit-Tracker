@@ -45,8 +45,10 @@ The purpose of this app is to allow the user to view, create, and track daily wo
 
 ### SCREENSHOTS:
 
+#### Quick Fitness Tracker
 <img src="./images/quickFitTracker.PNG" alt="quick fitness tracker">
 
+#### Fitness Progress Report
 <img src="./images/progressReport.PNG" alt="fitness progress report">
 
 
