@@ -49,6 +49,7 @@ The purpose of this app is to allow the user to view, create, and track daily wo
 
 ### HEROKU URL:
 
+https://quick-fit-tracker.herokuapp.com/
 
 ### GIThUB URL:
 

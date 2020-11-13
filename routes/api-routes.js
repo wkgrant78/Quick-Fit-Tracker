@@ -15,15 +15,38 @@ module.exports = (app) => {
         });
     });
 
+    app.get("/api/workouts/range", (req, res) => {
+        db.Workout.find({}, (err, workouts) => {
+            if(err){
+                console.log(err);
+            } else {
+                res.json(workouts)
+            }
+        });
+    });
+
+
     //PUT - used to update workout with new exercises
-    app.put("/api/workouts/:workout", ({ params, body }, res) => {
-        db.Workout.findOneAndUpdate({ _id: params.id},
-                                    {$push: {exercise:body }},
-                                    { upsert: true, useFindandModify:false},
-                                    updatedWorkout => {
+    app.put("/api/workouts/:id", ({ params, body }, res) => {
+        console.log("hittingputroute")
+        console.log("id", params.id);
+        db.Workout.findByIdAndUpdate(params.id,
+                                    { $push: { exercises: body } },
+                                    { upsert: true, useFindandModify: false})
+                                    .then(updatedWorkout => {
+                                        // console.log(updatedWorkout);
                                         res.json(updatedWorkout);
                                     })
+                                    .catch(error => console.error(error))
     });
+
+    // quotesCollection.findOneAndUpdate(
+    //     query,
+    //     update,
+    //     options
+    //   )
+    //     .then(result => {/* ... */})
+    //     
 
     //POST - create a new workout
     app.post('/api/workouts', (req,res) => {
